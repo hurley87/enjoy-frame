@@ -9,7 +9,7 @@ export async function GET() {
     },
     frame: {
       version: '1',
-      name: 'Enjoyr Frame',
+      name: 'Enjoyr',
       iconUrl: 'https://enjoyr.vercel.app/logo.png',
       homeUrl: 'https://enjoyr.vercel.app',
       imageUrl: 'https://enjoyr.vercel.app/logo.png',
