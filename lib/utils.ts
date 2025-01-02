@@ -13,7 +13,7 @@ export function cultLogo(address: string) {
     '0x83f3494acef796737424479b976401d4e2c1b07a': 'comicsans.jpg',
     '0x733bf0a23c57875b2be6b4d33983f17fe0bf1366': 'clanker.jpg',
     '0xa66d8c2721510fc06ed89c09ae9efef33944fd4d': 'blonde.jpg',
-    '0x5E0B2b0821ab4FA4F93A35CbdC56cCbff8CC94D5': 'oil.jpg',
+    '0x5e0b2b0821ab4fa4f93a35cbdc56ccbff8cc94d5': 'oil.jpg',
   };
   return logos[address.toLowerCase()];
 }
@@ -26,7 +26,7 @@ export function ticker(address: string) {
     '0x83f3494acef796737424479b976401d4e2c1b07a': '$COMICSANS',
     '0x733bf0a23c57875b2be6b4d33983f17fe0bf1366': '$CLANKER',
     '0xa66d8c2721510fc06ed89c09ae9efef33944fd4d': '$BLONDE',
-    '0x5E0B2b0821ab4FA4F93A35CbdC56cCbff8CC94D5': '$OIL',
+    '0x5e0b2b0821ab4fa4f93a35cbdc56ccbff8cc94d5': '$OIL',
   };
   return logos[address.toLowerCase()];
 }
