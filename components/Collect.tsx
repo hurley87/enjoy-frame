@@ -8,6 +8,7 @@ import Info from './Info';
 import Mint from './Mint';
 import { cultLogo } from '@/lib/utils';
 import Creator from './Creator';
+import { Button } from './ui/button';
 // import { Button } from './ui/button';
 // import { toast } from 'sonner';
 
@@ -231,29 +232,31 @@ export default function Collect({
           {username && <Creator username={username} />}
         </div>
       )}
-      {/* <div className="flex justify-between items-center gap-3">
-        <Mint tokenContract={tokenContract} tokenId={tokenId} />
-        <Button
-          onClick={() =>
-            sdk.actions.openUrl(
-              `https://opensea.io/assets/base/${tokenContract}/${tokenId}`
-            )
-          }
-          variant="outline"
-        >
-          Opensea
-        </Button>
+      <div className="flex justify-between items-center gap-3">
+        {formattedTime !== '' ? (
+          <Mint tokenContract={tokenContract} tokenId={tokenId} />
+        ) : (
+          <div className="flex justify-center items-center">
+            <div className="text-lg font-medium">Mint is closed</div>
+          </div>
+        )}
+        {Number(mintCount) > 0 && (
+          <Button
+            onClick={() =>
+              sdk.actions.openUrl(
+                `https://opensea.io/assets/base/${tokenContract}/${tokenId}`
+              )
+            }
+            variant="outline"
+          >
+            Opensea
+          </Button>
+        )}
+        {/*
         <Button onClick={copyToClipboard} variant="outline">
           Share
-        </Button>
-      </div> */}
-      {formattedTime !== '' ? (
-        <Mint tokenContract={tokenContract} tokenId={tokenId} />
-      ) : (
-        <div className="flex justify-center items-center">
-          <div className="text-lg font-medium">Mint is closed</div>
-        </div>
-      )}
+        </Button>*/}
+      </div>
     </div>
   );
 }
