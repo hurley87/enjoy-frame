@@ -20,6 +20,7 @@ export function cultLogo(address: string) {
     '0x860b81855a790f2431d27946cee8f839feaf9fa8': 'brunette.jpg',
     '0xab9f39be74aaeeaed7386c5d1abc0b10ec0ef4b0': 'lum.jpg',
     '0xf9aca6a8d6803cf817aac5ad3132cf6ea4a32d55': 'degen.jpg',
+    '0x0d33fbd6d4e72ec0cdc01260c7bbe72378fe356c': 'clanktardio.jpg',
   };
   return logos[address.toLowerCase()];
 }
@@ -39,6 +40,7 @@ export function ticker(address: string) {
     '0x860b81855a790f2431d27946cee8f839feaf9fa8': '$BRUNETTE',
     '0xab9f39be74aaeeaed7386c5d1abc0b10ec0ef4b0': '$LUM',
     '0xf9aca6a8d6803cf817aac5ad3132cf6ea4a32d55': '$DEGEN',
+    '0x0d33fbd6d4e72ec0cdc01260c7bbe72378fe356c': '$CLANKTARDIO',
   };
   return logos[address.toLowerCase()];
 }
