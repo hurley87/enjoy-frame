@@ -248,6 +248,7 @@ export default function Collect({
               )
             }
             variant="outline"
+            className="py-2 text-lg"
           >
             Opensea
           </Button>
