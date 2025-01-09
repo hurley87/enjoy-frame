@@ -9,8 +9,6 @@ import Mint from './Mint';
 import { cultLogo } from '@/lib/utils';
 import Creator from './Creator';
 import { Button } from './ui/button';
-// import { Button } from './ui/button';
-// import { toast } from 'sonner';
 
 interface Token {
   image: string;
@@ -135,13 +133,6 @@ export default function Collect({
     (attribute) => attribute.trait_type === 'creator'
   )?.value;
 
-  // const copyToClipboard = () => {
-  //   navigator.clipboard.writeText(
-  //     `https://enjoyr.vercel.app/collect/${tokenContract}/${tokenId}`
-  //   );
-  //   toast.success('Copied to clipboard');
-  // };
-
   console.log(formattedTime);
 
   return (
@@ -238,12 +229,12 @@ export default function Collect({
         </div>
       )}
       <div className="flex justify-between items-center gap-3">
-        {formattedTime !== '' ? (
+        {formattedTime !== '00:00:00' ? (
           <Mint tokenContract={tokenContract} tokenId={tokenId} />
         ) : (
-          <div className="flex justify-center items-center">
-            <div className="text-lg font-medium">Mint is closed</div>
-          </div>
+          <Button disabled className="w-full text-xl py-2 h-14">
+            Mint is closed
+          </Button>
         )}
         {Number(mintCount) > 0 && (
           <Button
@@ -253,15 +244,11 @@ export default function Collect({
               )
             }
             variant="outline"
-            className="py-2 text-lg"
+            className="py-2 text-lg h-14"
           >
             Opensea
           </Button>
         )}
-        {/*
-        <Button onClick={copyToClipboard} variant="outline">
-          Share
-        </Button>*/}
       </div>
     </div>
   );
