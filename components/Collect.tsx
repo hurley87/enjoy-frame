@@ -228,7 +228,7 @@ export default function Collect({
           {username && <Creator username={username} />}
         </div>
       )}
-      <div className="flex justify-between items-center gap-3">
+      <div className="flex justify-between items-center gap-3 pb-3">
         {formattedTime !== '00:00:00' ? (
           <Mint tokenContract={tokenContract} tokenId={tokenId} />
         ) : (
