@@ -229,7 +229,7 @@ export default function Collect({
         </div>
       )}
       <div className="flex justify-between items-center gap-3 pb-3">
-        {formattedTime !== '00:00:00' ? (
+        {formattedTime !== '00:00:00' && formattedTime !== '' ? (
           <Mint tokenContract={tokenContract} tokenId={tokenId} />
         ) : (
           <Button disabled className="w-full text-xl py-2 h-14">
